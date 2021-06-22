@@ -12,7 +12,7 @@ class PlayersController < ApplicationController
     end 
 
     def create 
-        player = player.create(player_params)
+        player = Player.create(player_params)
         render json: player 
     end 
 
@@ -30,7 +30,7 @@ class PlayersController < ApplicationController
     private 
 
     def find_players 
-        @player = player.find(params[:id])
+        @player = Player.find(params[:id])
     end
 
     def player_params 
