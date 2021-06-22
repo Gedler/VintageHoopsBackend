@@ -15,12 +15,16 @@ Rails.application.routes.draw do
  post "/seller/new", to: "sellers#create"
  delete "/seller/:id", to: "sellers#destroy"
  patch "/seller/:id", to: "sellers#update"
+ post "/login", to: "sellers#login"
 
  get "/players", to: "players#index"
  get "/player/:id", to: "players#show"
  post "/player/new", to: "players#create"
  delete "/player/:id", to: "players#destroy"
  patch "/player/:id", to: "players#update"
+
+
+
 
 
  

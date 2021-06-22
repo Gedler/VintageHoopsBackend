@@ -108,13 +108,13 @@ all_products = [
         size: "8" ,
         price: 300
 }, 
-    {
+    {   
         player_id: jordan.id, 
         seller_id: Seller.all.sample.id, 
         title:  "Air Jordan 11 Gamma Blue",
         product_type: "Sneakers", 
         team:  "Bulls",
-        image: "https://www.hijordan.com/image/cache/catalog/air-jordan-11/air-jordan-11-82-1080x1080.jpg",
+        image: "http://jordansdaily.com/wp-content/uploads/2017/05/air-jordan-11-gamma-blue-3.png",
 
         desc: "Throwback Air Jordan 11s to freshen up your style!", 
         size: "11", 
@@ -165,12 +165,12 @@ all_products = [
     price: 250
 },
 {
-    player_id: kobe.id, 
+    player_id: kobe.id, #
     seller_id: Seller.all.sample.id, 
     title:  "Kobe Bryant Alternative Lakers Jersey",
     product_type: "Jerseys", 
     team: "Lakers" ,
-    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstore.nba.com%2Flos-angeles-lakers%2Fmens-los-angeles-lakers-kobe-bryant-mitchell-and-ness-royal-1996-97-hardwood-classics-authentic-player_id-jersey%2Ft-25140791%2Bp-5873708104832%2Bz-9-2378681745&psig=AOvVaw09DYgOPEGSm5ENas_kSpGm&ust=1624047173000000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCNDT_Ki9n_ECFQAAAAAdAAAAABAH",
+    image: "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_3633000/altimages/ff_3633450-35489f2e237d004eb8dcalt1_full.jpg&w=600",
     desc: "Lakers", 
     size: "M", 
     price: 300
