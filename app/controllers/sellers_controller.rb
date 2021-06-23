@@ -1,6 +1,6 @@
 class SellersController < ApplicationController
     before_action :find_sellers, only: [:update , :destroy, :show]
-    skip_before_action :logged_in?, only: [:create, :login]
+    skip_before_action :logged_in?, only: [:create, :login, :index]
     
    
     def index 
@@ -29,13 +29,11 @@ class SellersController < ApplicationController
     end 
 
     def login
-        
+
         seller = Seller.find_by(username: params[:username])
 
         if seller && seller.authenticate(params[:password])
-            
             render json: {seller: seller.username, token: encode_token({seller_id: seller.id})}
-
         else
             render json: {error: "username or password is not correct!!"}
         end

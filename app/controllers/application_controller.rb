@@ -4,27 +4,25 @@ class ApplicationController < ActionController::Base
     before_action :logged_in?
 
     def encode_token(payload)
-        JWT.encode(payload, "NBAStore")
+        JWT.encode(payload, "Vintage")
     
     end
 
     def logged_in?
     
         headers = request.headers["Authorization"]
-        token = headers.split("")[1]
+        token = headers.split(" ")[1]
 
         begin
-            user_id = JWT.decode(token,"NBAStore")[0]["seller_id"]
+            user_id = JWT.decode(token,"Vintage")[0]["seller_id"]
             user = User.find(seller_id)
         rescue
             user = nil
         end
 
-
         unless user
             render json: {error: "You must login!!"}
         end
     end
-    
 
 end
